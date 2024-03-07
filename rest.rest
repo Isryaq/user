@@ -1,0 +1,48 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MDUzMTQyNiwiZXhwIjoxNjkwNjE3ODI2fQ.pNVcvpxoiWnZvtc2bmYfrW2s0e1dFtYRhD4GBCJsa2o
+
+###
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "name": "Salim",
+    "email": "Sallim4@gmail.com",
+    "password": "Salim123"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "Sallim4@gmail.com",
+    "password": "Salim123"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+PUT http://localhost:5000/name
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MDUyODk2MCwiZXhwIjoxNjkwNTI5MDIwfQ.-Uyumsuz6XUgOEKwFnH0DqGjn_xD_RgwM5UWPSmCLY4
+Content-Type: application/json
+
+{
+    "name": "hasan"
+}
+
+###
+PUT http://localhost:5000/password
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MDUyODk2MCwiZXhwIjoxNjkwNTI5MDIwfQ.-Uyumsuz6XUgOEKwFnH0DqGjn_xD_RgwM5UWPSmCLY4
+Content-Type: application/json
+
+{
+    "password": "Hasan123",
+    "newpassword": "Hasan1234",
+    "confPassword": "Hasan1234"
+}
+
+###
+DELETE http://localhost:5000/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MDUzMTQyNiwiZXhwIjoxNjkwNjE3ODI2fQ.pNVcvpxoiWnZvtc2bmYfrW2s0e1dFtYRhD4GBCJsa2o
